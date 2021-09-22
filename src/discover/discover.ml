@@ -82,9 +82,12 @@ let () =
            ; "-mbmi", prog_tzcnt
            ; "-mcrc32", prog_crc32
            ; "-mcrc32", prog_crc32_on_32bit_target
+           ; "-msse4.2", prog_crc32
+           ; "-msse4.2", prog_crc32_on_32bit_target
            ; "-mprfchw", prog_prefetchw
            ; "-mprefetchwt1", prog_prefetchwt1
            ]
+         |> List.sort_uniq String.compare
        in
        Flags.write_sexp !output flags)
 ;;
