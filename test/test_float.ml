@@ -55,7 +55,7 @@ let%expect_test "iround_half_to_even" =
     printf "iround_half_to_even %.19g = %Ld\n" x (I.iround_half_to_even x));
   [%expect
     {|
-    iround_half_to_even inf = -9223372036854775808
+    iround_half_to_even inf = 9223372036854775807
     iround_half_to_even -9223372036854775808 = -9223372036854775808
     iround_half_to_even -4611686018427387904 = -4611686018427387904
     iround_half_to_even -3.5 = -4

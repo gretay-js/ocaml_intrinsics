@@ -23,9 +23,9 @@ let%expect_test "rdtsc" =
   [%expect {| true |}]
 ;;
 
-let%expect_test "rdpmc" =
-  ignore (I.rdpmc 0l : int64);
-  work ();
-  ignore (I.rdpmc 0l : int64);
-  [%expect {||}]
-;;
+(* let%expect_test "rdpmc" =
+ *   ignore (I.rdpmc 0l : int64);
+ *   work ();
+ *   ignore (I.rdpmc 0l : int64);
+ *   [%expect {||}]
+ * ;; *)
